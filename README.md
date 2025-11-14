@@ -63,7 +63,7 @@ Whenever an EC2 instance fails, the Auto Scaling Group detects the issue and **l
 └── README.md             # Documentation (you’re reading this)
 
 **Prerequisites**
-Before you egin, ensure you have:
+Before you begin, ensure you have:
  AWS CLI configured with IAM Credentials.
  Terraform v1.13 installed.
  An AWS IAM user with permissions for EC2, VPC, and Auto Scaling
@@ -88,16 +88,16 @@ Before you egin, ensure you have:
 
 **Testing the Setup**
 Run --> terraform output ---> in gitbash or check the AWS Console -> EC2 ->Load Balancer.
-Copy the Load alancer DNS name (e.g. app-lb-12345678.ap-sout-1.el.amazonaws.com)
+Copy the Load balancer DNS name (e.g. app-lb-12345678.ap-sout-1.el.amazonaws.com)
 Open it in the browser -- you should see:
 "Hello from Sumedha's Auto-Healing EC2 Instance".
 
 **Testing Self-Healing Behaviour**
 Go to AWS Console --> EC2 -->Auto Scaling Groups.
 Select your ASG --> "instance Management" tab.
-Manually terminate on eof the EC2 instances.
+Manually terminate one of the EC2 instances.
 Wait 1-2 minutes.
-**NOTE**: Auo Scaling will automatically launch a new EC2 instance, proving the self-healing functionality.
+**NOTE**: Auto Scaling will automatically launch a new EC2 instance, proving the self-healing functionality.
 
 **Clean up Resource**
 To avoid the unwanted AWS Charges:
